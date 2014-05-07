@@ -27,99 +27,43 @@
         <link rel="stylesheet" href="jquery.mobile-1.4.2.min.css">
         <script src="jquery-2.1.1.min.js"></script>
         <script src="jquery.mobile-1.4.2.min.js"></script>
-
+        <style type="text/css">
+            * {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+            }
+            input {
+                -webkit-user-select: auto;
+            }
+        </style>
         <title>Hello World</title>
     </head>
     <body>
-    <div data-role="page" id="pageone" data-theme="b">
+    <div data-role="page" id="pagemain" data-theme="b">
         <div data-role="header" data-position="fixed">
-            <a href="#" data-role="button">首页</a>
-            <h1>欢迎访问我的主页</h1>
+            <h1>练习</h1>
         </div>
 
         <div data-role="content">
-            <p>Welcome!</p>
-            <style type="text/css">
-                * {
-                    -webkit-touch-callout: none;
-                    -webkit-user-select: none;
-                }
-                input {
-                    -webkit-user-select: auto;
-                }
-            </style>
-            <input type="button" id="btn" value="click me!" onclick="showMsg();" />
-            <script type="text/javascript">
-                function showMsg() {
-                    alert("msg is 222swwwwwwwwwwhowing!");
-                }
-
-                jQuery(document).ready(function(){alert("ddddd")});
-
-
-                $(function(){
-                    document.getElementById("button3").onclick=showMsg;
-                });
-
-                $("p").on("taphold",function(){
-                    $(this).hide();
-                });
-            </script>
-
-
-
-
-            <a href="#pagetwo" data-transition="slide">转到页面二</a>
-
-            <button id="button3"">按钮</button>
-
-            <a href="#pagetwo" data-transition="slide" data-role="button" data-inline="true">按钮1</a>
+            <a href="#pagefilter" data-transition="slide" data-role="button" data-inline="true">按钮1</a>
             <a href="#page3" data-transition="slide" data-role="button" data-inline="true">按钮2</a>
-
-            <div data-role="controlgroup" data-type="horizontal">
-                <a href="#anylink" data-role="button">按钮 1</a>
-                <a href="#anylink" data-role="button">按钮 2</a>
-                <a href="#anylink" data-role="button">按钮 3</a>
-            </div>
-
-            <a href="#" data-role="button" data-rel="back">返回</a>
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <h1>页脚文本</h1>
         </div>
     </div>
 
-    <div data-role="page" id="page3">
+    <div data-role="page" id="pagefilter" data-theme="b">
         <div data-role="header" data-position="fixed">
-            <h1>Fixed 页眉</h1>
-        </div>
-
-        <div data-role="content">
-            <p><b>提示：</b>如果要看到效果，则需要调整窗口大小使滚动条可用。</p>
-
-            <p><b>提示：</b>如果滚动条可用，那么敲击屏幕将隐藏或显示页眉/页脚。效果会根据您在页面上的位置而变化。</p>
-
-            <p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
-        </div>
-
-        <div data-role="footer" data-position="fixed" data-fullscreen="true">
-            <h1>Fixed 页脚</h1>
+            <a href="#pagemain" data-role="button" data-rel="back">返回</a>
+            <h1>设置</h1>
+            <a href="#pagetranning" data-role="button" data-transition="slide" class="ui-btn-right">开始</a>
         </div>
     </div>
 
-    <div data-role="page" id="pagetwo">
-        <div data-role="header">
-            <h1>欢迎访问我的主页</h1>
+    <div data-role="page" id="pagetranning" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#pagefilter" data-role="button" data-rel="back">返回</a>
+            <h1>训练</h1>
         </div>
 
-        <div data-role="content">
-            <p>Goodbye!</p>
-            <a href="#pageone" data-transition="slidefade" data-direction="reverse">转到页面一</a>
-        </div>
-        <div data-role="footer">
-            <h1>页脚文本2</h1>
-        </div>
     </div>
 
     <script type="text/javascript" src="phonegap.js"></script>
